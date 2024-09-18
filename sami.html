@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        25% {
+          transform: translateY(-15px);
+        }
+        50% {
+          transform: translateY(0);
+        }
+        75% {
+          transform: translateY(-5px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      h2 {
+        color: white;
+        animation: bounce 2s infinite; /* Applying bounce animation */
+      }
+      /* Style the video to cover the entire body */
+      #background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the video covers the entire area */
+        z-index: -1; /* Ensures the video is behind all other content */
+      }
+
+      .div-head {
+        background-color: rgb(30, 95, 169);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+      }
+
+      .navbar {
+        text-align: center;
+        padding: 10px;
+      }
+
+      .navbar ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
+
+      .navbar li {
+        display: inline-block;
+        margin: 0 15px;
+      }
+
+      .navbar li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+      }
+
+      .container {
+        background-color: rgb(30, 95, 169);
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        flex-wrap: wrap;
+      }
+
+      .container div {
+        flex: 1;
+        margin: 10px;
+      }
+
+      .email input {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+        margin: 10px auto;
+        display: block;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .footer {
+        background-color: rgb(30, 95, 169);
+        color: white;
+        padding: 20px;
+        margin-top: 40px;
+      }
+
+      .footer ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
+
+      .footer ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer ul li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .navbar li {
+          margin: 10px 0;
+        }
+
+        .container {
+          flex-direction: row;
+          font-size: small;
+          padding: 0%;
+          margin: 0%;
+        }
+
+        .container div {
+          text-align: center;
+          margin-top: 2;
+        }
+
+        .email input {
+          margin: 20px auto;
+        }
+        h2{
+            font-size: medium;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .navbar li a {
+          font-size: 14px;
+        }
+        h2{
+            font-size: medium;
+        }
+        .container {
+          flex-direction: row;
+        }
+      }
+    </style>
+    <title>Developers</title>
+  </head>
+  <body>
+    <video autoplay muted loop id="background-video">
+      <source src="./images/9665455-hd_1920_1080_25fps.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <header>
+      <div class="div-head">BUILDING DREAMS</div>
+    </header>
+
+    <div style="text-align: center; margin-top: 10px">
+      <img src="./images/aqsa.jpeg" alt="logo" width="200px" />
+    </div>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div style="text-align: center; color: white">
+      <h2>WELCOME TO BLUE MOON DEVELOPERS</h2>
+      <p>"Building Beyond Boundaries - Transforming Visions into Reality with Precision and Innovation."</p>
+      <button class="button button1">Why Choose Blue Moon Developers</button>
+    </div>
+
+    <div>
+      <h3 style="text-align: center; color: white">Subscribe to our email:</h3>
+      <div class="email">
+        <input type="email" placeholder="Enter Email" />
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div>
+            <h4>Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>User Info</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact Us:</h4>
+          <p>Email: bluemoondevelopers@gmail.com</p>
+        </div>
+
+        <div>
+          <h4>Working Days:</h4>
+          <p>Mon-Fri: 9:00 am to 5:00 pm</p>
+          <p>Sat & Sun: Off</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
